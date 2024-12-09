@@ -1,0 +1,13 @@
+{
+    "manifest_version": "1",
+    "name": "CSV Exporter",
+    "description": "Export Tableau data to CSV",
+    "version": "1.0.0",
+    "author": "Gabriel",
+    "company": "Custom Analytics",
+    "category": "Data Export",
+    "permissions": ["dataSources"],
+    "url": "index.html",
+    "configure_url": "index.html",
+    "icon_url": "icon.png"
+}
