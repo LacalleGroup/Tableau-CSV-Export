@@ -63,11 +63,11 @@ async function exportToCSV() {
 
         const columns = dataTable.columns.map(col => col.fieldName);
 
-        // Sort rows by number of null values
+        // Sort rows by the number of non-null values (most values first)
         const sortedData = dataTable.data.sort((a, b) => {
-            const nullCountA = a.filter(cell => cell.formattedValue === "" || cell.formattedValue === null).length;
-            const nullCountB = b.filter(cell => cell.formattedValue === "" || cell.formattedValue === null).length;
-            return nullCountA - nullCountB; // Ascending order (least nulls first)
+            const nonNullCountA = a.filter(cell => cell.formattedValue && cell.formattedValue !== "Null").length;
+            const nonNullCountB = b.filter(cell => cell.formattedValue && cell.formattedValue !== "Null").length;
+            return nonNullCountB - nonNullCountA; // Descending order (most non-null values first)
         });
 
         // Build CSV content
