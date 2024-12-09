@@ -4,10 +4,8 @@
     "description": "Export Tableau data to CSV",
     "version": "1.0.0",
     "author": "Gabriel",
-    "company": "Custom Analytics",
     "category": "Data Export",
-    "permissions": ["dataSources"],
+    "permissions": ["dataSources", "dashboard"],
     "url": "index.html",
-    "configure_url": "index.html",
-    "icon_url": "icon.png"
+    "configure_url": "index.html"
 }
