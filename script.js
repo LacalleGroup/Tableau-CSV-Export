@@ -49,11 +49,12 @@ async function exportToCSV() {
 
         console.log(`Exporting data from: ${worksheet.name}`);
 
+        // Use summary data instead of underlying data
         const options = {
-            maxRows: 1000, // Change as needed
-            includeAllColumns: true
+            maxRows: 10000, // Increase limit as needed
+            ignoreSelection: true
         };
-        const dataTable = await worksheet.getUnderlyingDataAsync(options);
+        const dataTable = await worksheet.getSummaryDataAsync(options);
 
         if (dataTable.data.length === 0) {
             alert("No data available for export.");
