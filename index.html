@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
-<style>
-   #exportBtn {
-    margin-top: 50px;
-   }
-</style>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau CSV Exporter</title>
     <script type="module" src="https://cdn.jsdelivr.net/gh/tableau/extensions-api/lib/tableau.extensions.1.latest.js"></script>
 </head>
 <body>
-    <h1>Export CSV</h1>
-    <button id="exportBtn">EXPORT to CSV</button>
+    <h1>Select a Worksheet to Export</h1>
+
+    <label for="worksheetSelect">Choose Worksheet:</label>
+    <select id="worksheetSelect"></select>
+    
+    <button id="exportBtn" disabled>EXPORT to CSV</button>
 
     <script src="script.js"></script>
 </body>
