@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "author": "Gabriel",
     "category": "Data Export",
-    "permissions": ["dataSources", "dashboard"],
+    "permissions": ["dataSources", "dashboard", "interactive"],
     "url": "index.html",
     "configure_url": "index.html"
 }
