@@ -51,7 +51,7 @@ async function exportToCSV() {
 
         // Use summary data instead of underlying data
         const options = {
-            maxRows: 10000, // Increase limit as needed
+            maxRows: 1000000, // Increase limit as needed
             ignoreSelection: true
         };
         const dataTable = await worksheet.getSummaryDataAsync(options);
