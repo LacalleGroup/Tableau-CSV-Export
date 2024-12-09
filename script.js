@@ -63,9 +63,16 @@ async function exportToCSV() {
 
         const columns = dataTable.columns.map(col => col.fieldName);
 
+        // Sort rows by number of null values
+        const sortedData = dataTable.data.sort((a, b) => {
+            const nullCountA = a.filter(cell => cell.formattedValue === "" || cell.formattedValue === null).length;
+            const nullCountB = b.filter(cell => cell.formattedValue === "" || cell.formattedValue === null).length;
+            return nullCountA - nullCountB; // Ascending order (least nulls first)
+        });
+
         // Build CSV content
         let csvContent = columns.join(",") + "\n";
-        dataTable.data.forEach(row => {
+        sortedData.forEach(row => {
             const rowData = row.map(cell => `"${cell.formattedValue}"`);
             csvContent += rowData.join(",") + "\n";
         });
