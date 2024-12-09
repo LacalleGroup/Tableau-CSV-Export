@@ -63,11 +63,11 @@ async function exportToCSV() {
 
         const columns = dataTable.columns.map(col => col.fieldName);
 
-        // Sort rows by the number of non-null values (most values first)
+        // Sort rows by the number of populated values (most populated fields first)
         const sortedData = dataTable.data.sort((a, b) => {
-            const nonNullCountA = a.filter(cell => cell.formattedValue && cell.formattedValue !== "Null").length;
-            const nonNullCountB = b.filter(cell => cell.formattedValue && cell.formattedValue !== "Null").length;
-            return nonNullCountB - nonNullCountA; // Descending order (most non-null values first)
+            const populatedCountA = a.filter(cell => cell.formattedValue !== "Null" && cell.formattedValue.trim() !== "").length;
+            const populatedCountB = b.filter(cell => cell.formattedValue !== "Null" && cell.formattedValue.trim() !== "").length;
+            return populatedCountB - populatedCountA; // Descending order (most populated first)
         });
 
         // Build CSV content
