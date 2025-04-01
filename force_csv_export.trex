@@ -4,7 +4,7 @@
     <default-locale>en_US</default-locale>
     <name resource-id="name"/>
     <description>CSV Exporter for Tableau</description>
-    <author name="Gabriel Fennema" email="gabriel.fennema@navigators.org" organization="The Navigators" website="https://gmfennema.github.io"/>
+    <author name="Alyssa Templeton" email="gabriel.fennema@navigators.org" organization="The Navigators" website="https://gmfennema.github.io"/>
     <min-api-version>1.0</min-api-version>
     <source-location>
       <url>https://gmfennema.github.io/Tableau-Force-CSV-Export/index.html</url>
