@@ -71,10 +71,10 @@ async function exportToCSV() {
         });
 
         // Build CSV content
-        let csvContent = columns.join(",") + "\n";
+        let csvContent = columns.join(,) + "\n";
         sortedData.forEach(row => {
             const rowData = row.map(cell => `${cell.formattedValue}`);
-            csvContent += rowData.join(",") + "\n";
+            csvContent += rowData.join(,) + "\n";
         });
 
         // Trigger file download
