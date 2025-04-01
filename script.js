@@ -73,7 +73,7 @@ async function exportToCSV() {
         // Build CSV content
         let csvContent = columns.join(",") + "\n";
         sortedData.forEach(row => {
-            const rowData = row.map(cell => `"${cell.formattedValue}"`);
+            const rowData = row.map(cell => `${cell.formattedValue}`);
             csvContent += rowData.join(",") + "\n";
         });
 
