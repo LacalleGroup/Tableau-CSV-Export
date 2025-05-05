@@ -1,6 +1,8 @@
 
 # **Tableau Force CSV Export**  
 
+## This repo has PAGES enabled. As such, treat it like a *PUBLIC REPO*.
+
 ## **1. Introduction**  
 The Tableau CSV Export Extension solves common export issues when using Tableau Server or Tableau Online. It ensures that files are exported as true CSVs instead of incorrectly formatted TSVs (while still labelled as CSVs). 
 
